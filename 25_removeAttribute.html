@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+  <button disabled>Submit</button>
+  <button type="button" onclick="enableBtns()">Reset</button>
+</form>
+<script>
+    function enableBtns() {
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach(button => {
+            button.removeAttribute("disabled");
+        });
+    }
+    </script>
+</body>
+</html>

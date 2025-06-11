@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Replace Image</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    #container img {
+      width: 300px;
+      border: 2px solid #444;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="oldImg" src="old.jpeg" alt="Old Image" />
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const newImg = document.createElement("img");
+      newImg.src = "new.jpg";
+      newImg.alt = "New Image";
+
+      const oldImg = document.getElementById("oldImg");
+      const container = document.getElementById("container");
+
+      container.replaceChild(newImg, oldImg);
+    });
+  </script>
+</body>
+</html>

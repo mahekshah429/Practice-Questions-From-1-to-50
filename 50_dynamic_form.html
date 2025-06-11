@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="formContainer"></div>
+<script>
+  const container = document.getElementById('formContainer');
+  const form = document.createElement('form');
+  form.innerHTML = '<input name="name"><input name="email"><button>Submit</button>';
+  form.onsubmit = e => {
+    e.preventDefault();
+    console.log(form.name.value, form.email.value);
+  };
+  container.appendChild(form);
+</script>
+
+</body>
+</html>

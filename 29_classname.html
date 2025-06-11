@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<button onclick="toggleClass()">Toggle</button>
+<script>
+    function toggleClass() {
+  document.querySelectorAll("p").forEach(p => {
+    p.className = p.className === "highlighted" ? "" : "highlighted";
+  });
+}
+
+</script>
+</body>
+</html>

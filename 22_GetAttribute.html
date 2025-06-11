@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Source Logger</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+
+    .image-card img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="image-container">
+    <div class="image-card">
+      <img src="image1.avif" alt="Image 1" />
+    </div>
+    <div class="image-card">
+      <img src="images2.jpeg" alt="Image 2" />
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll("img").forEach((img, index) => {
+      console.log(`Image ${index + 1} source:`, img.getAttribute("src"));
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="target">Click me</div>
+<script>
+  const target = document.getElementById('target');
+  target.setAttribute('data-id', '123');
+  target.addEventListener('click', () => {
+    console.log(target.getAttribute('data-id'));
+  });
+</script>
+
+</body>
+</html>
